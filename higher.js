@@ -3,9 +3,10 @@ function myHigherFunction(func) {
     return outsideFunction
 }
 
-function outsideFunction() {
-    console.log("outsideFunction");
+function outsideFunction(value) {
+    console.log("value: " + value);
 }
 
 let returnValue = myHigherFunction();//outsidefunctionは呼び出していない(カッコがついていない)
-returnValue();
+// returnValue("value");
+myHigherFunction()("value!!!!")
