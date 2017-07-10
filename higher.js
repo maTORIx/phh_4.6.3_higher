@@ -1,10 +1,11 @@
 function myHigherFunction(func) {
     console.log("my higher function");
-    func()
+    return outsideFunction
 }
 
 function outsideFunction() {
     console.log("outsideFunction");
 }
 
-myHigherFunction(outsideFunction);
+let returnValue = myHigherFunction();//outsidefunctionは呼び出していない(カッコがついていない)
+returnValue();
